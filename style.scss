@@ -1,169 +1,230 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing :border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html,body{
-width :100%;
-height :100%;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
-main{
-    color: white;
+main {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  .clock {
+    background-color: black;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 4px;
+    position: relative;
+
+    .numbers {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .number {
+        font-size: 2rem;
+        font-weight: 600;
+        position: absolute;
+        height: 100%;
+      }
+      .one {
+        transform: rotate(30deg);
+        span {
+          transform: rotate(-30deg);
+          position: absolute;
+        }
+      }
+      .two {
+        transform: rotate(60deg);
+        span {
+          transform: rotate(-60deg);
+          position: absolute;
+        }
+      }
+      .three {
+        transform: rotate(90deg);
+        span {
+          transform: rotate(-90deg);
+          position: absolute;
+        }
+      }
+      .four {
+        transform: rotate(120deg);
+        span {
+          transform: rotate(-120deg);
+          position: absolute;
+        }
+      }
+      .five {
+        transform: rotate(150deg);
+        span {
+          transform: rotate(-150deg);
+          position: absolute;
+        }
+      }
+      .six {
+        transform: rotate(180deg);
+        span {
+          transform: rotate(-180deg);
+          position: absolute;
+        }
+      }
+      .seven {
+        transform: rotate(210deg);
+        span {
+          transform: rotate(-210deg);
+          position: absolute;
+        }
+      }
+      .eight {
+        transform: rotate(240deg);
+        span {
+          transform: rotate(-240deg);
+          position: absolute;
+        }
+      }
+      .nine {
+        transform: rotate(270deg);
+        span {
+          transform: rotate(-270deg);
+          position: absolute;
+        }
+      }
+      .ten {
+        transform: rotate(300deg);
+        span {
+          transform: rotate(-300deg);
+          position: absolute;
+        }
+      }
+      .eleven {
+        transform: rotate(330deg);
+        span {
+          transform: rotate(-330deg);
+          position: absolute;
+        }
+      }
+      .twelve {
+        transform: rotate(360deg);
+        span {
+          transform: rotate(-360deg);
+          position: absolute;
+        }
+      }
+    }
+
+    .hands {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      //    background-color: rgba(255, 0, 0, 0.273);
+      .second {
+        height: 30%;
+        border-radius: 1em;
+        position: absolute;
+        transform: translatey(-50%);
+        width: 5px;
+        background-color: aqua;
+      }
+      .min {
+        height: 40%;
+        border-radius: 1em;
+        position: absolute;
+        transform: translatey(-50%);
+        width: 7px;
+        background-color: cadetblue;
+      }
+      .hour {
+        height: 30%;
+        border-radius: 1em;
+        position: absolute;
+        transform: translatey(-50%);
+        width: 6px;
+        background-color: white;
+      }
+    }
+  }
+  .handcover {
+    height: 30px;
+    width: 30px;
+    background-color: teal;
+    border-radius: 50%;
+    top: 46%;
+    left: 46%;
+    position: absolute;
+  }
+  .digi-clock {
+    gap: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    .clock{
-        background-color: black;
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        box-shadow: 0px 0px 8px 4px  ;
-        position: relative;
-
-        .numbers{
-           width: 100%;  
-           height: 100%;  
-         position: absolute;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-
-        .number{
-            font-size: 2rem;
-            font-weight: 600;
-          position: absolute;
-          height: 100%;
-          
-        }
-        .one{
-          transform: rotate(30deg);
-          span{
-            transform: rotate(-30deg);
-            position: absolute;
-          }
-          
-        }
-        .two{
-            transform: rotate(60deg);
-            span{
-                transform: rotate(-60deg);
-                position: absolute;
-              }
-        }
-        .three{
-            transform: rotate(90deg);
-            span{
-                transform: rotate(-90deg);
-                position: absolute;
-              }
-        }
-        .four{
-            transform: rotate(120deg);
-            span{
-                transform: rotate(-120deg);
-                position: absolute;
-              }
-        }
-        .five{
-            transform: rotate(150deg);
-            span{
-                transform: rotate(-150deg);
-                position: absolute;
-              }
-        }
-        .six{
-            transform: rotate(180deg);
-            span{
-                transform: rotate(-180deg);
-                position: absolute;
-              }
-        }
-        .seven{
-            transform: rotate(210deg);
-            span{
-                transform: rotate(-210deg);
-                position: absolute;
-              }
-        }
-        .eight{
-            transform: rotate(240deg);
-            span{
-                transform: rotate(-240deg);
-                position: absolute;
-              }
-        }
-        .nine{
-            transform: rotate(270deg);
-            span{
-                transform: rotate(-270deg);
-                position: absolute;
-              }
-        }
-        .ten{
-            transform: rotate(300deg);
-            span{
-                transform: rotate(-300deg);
-                position: absolute;
-              }
-        }
-        .eleven{
-            transform: rotate(330deg);
-            span{
-                transform: rotate(-330deg);
-                position: absolute;
-              }
-        }
-        .twelve{
-            transform: rotate(360deg);
-            span{
-                transform: rotate(-360deg);
-                position: absolute;
-              }
-        }
-        }
-        
-        .hands{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            width: 100%;
-           height: 100%;
-           position: absolute;
-        //    background-color: rgba(255, 0, 0, 0.273);
-           .second{
-            height: 30%;
-            border-radius: 1em;
-            position: absolute;
-            transform: translatey(-50%);
-            width: 5px;
-            background-color: aqua;
-           }
-           .min{
-            height: 40%;
-            border-radius: 1em;
-            position: absolute;
-            transform: translatey(-50%);
-            width: 7px;
-            background-color:cadetblue;
-           }
-           .hour{
-            height: 30%;
-            border-radius: 1em;
-            position: absolute;
-            transform: translatey(-50%);
-            width: 6px;
-            background-color:white;
-           }
-        }
+    width: 20%;
+    height: 100px;
+    position: absolute;
+    top: 55%;
+    // background-color: gold;
+    .seconds{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: green;
     }
-    .handcover{
-        height: 30px;
-        width: 30px;
-        background-color:teal;
-        border-radius: 50%;
-        position: absolute;
+    .mins{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border: none;
+      color: black;
+      border-radius: 50%;
+      background-color: white;
     }
+    .hours{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50%;
+      background-color: teal;
+    }
+  }
+  button{
+    position: absolute;
+    padding: 1em 4em;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: 2em;
+    border: none;
+    top: 85%;
+    &:active{
+      scale: 0.9;
+    }
+  }
 }

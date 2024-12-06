@@ -1,20 +1,37 @@
-setInterval(function(){
-    const secondsHand = document.querySelector('.second')
-    const seconds = new Date().getSeconds()
-    secondsHand.style.transform = `rotate(${seconds * 6}deg) translateY(-50%)`
-}, 1000)
-setInterval(function(){
-    const minHand = document.querySelector('.min')
-    const Minutes = new Date().getMinutes()
-    minHand.style.transform = `rotate(${Minutes * 6}deg) translateY(-50%)`
-}, 1000)
 setInterval(() => {
-    const hourHand = document.querySelector('.hour');
     const now = new Date();
-
-    const hours = now.getHours() % 12; // Convert to 12-hour format
+    const seconds = now.getSeconds();
     const minutes = now.getMinutes();
+    const hours = now.getHours() % 12;
+  
+    document.querySelector(".second").style.transform = `rotate(${seconds * 6}deg) translateY(-50%)`;
+    document.querySelector(".min").style.transform = `rotate(${minutes * 6}deg) translateY(-50%)`;
+    document.querySelector(".hour").style.transform = `rotate(${hours * 30 + minutes * 0.5}deg) translateY(-50%)`;
 
-    const rotation = (hours * 30) + (minutes * 0.5); // Simplified formula
-    hourHand.style.transform = `rotate(${rotation}deg) translateY(-50%)`;
-}, 1000);
+   var secons = document.querySelector(".seconds") 
+   var minuts = document.querySelector(".mins") 
+  var hrs =  document.querySelector(".hours") 
+
+    secons.innerHTML = `:${seconds}`
+    minuts.innerHTML = `${minutes}:`
+    hrs.innerHTML = `${hours % 12}:`
+  }, 1000);
+
+  var btn = document.querySelector('button');
+  var body = document.querySelector('body');
+  var flag = 0;
+  
+  btn.addEventListener('click', function() {
+      if (flag === 0) {
+          body.style.backgroundColor = 'black';
+          btn.style.backgroundColor = 'white';
+          btn.style.color = 'black';
+          flag = 1; // Switch the flag to 1
+      } else {
+          body.style.backgroundColor = 'white';
+          btn.style.backgroundColor = 'black';
+          btn.style.color = 'white';
+          flag = 0; // Switch the flag to 0
+      }
+  });
+  
